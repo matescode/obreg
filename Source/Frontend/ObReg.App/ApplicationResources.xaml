@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:ctl="clr-namespace:ObReg.App.Controls">
+    <ctl:PrintDataGridRowStyleSelector x:Key="PrintGridRowStyleSelector" />
+    <DataGrid x:Key="PrintDataGrid" 
+                  AutoGenerateColumns="False"
+                  Margin="30"
+                  Height="Auto"
+                  SelectionUnit="CellOrRowHeader"
+                  SelectionMode="Single"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto"
+                  CanUserResizeColumns="False"
+                  CanUserSortColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserReorderColumns="False"
+                  EnableRowVirtualization="False"
+                  ItemsSource="{Binding}"
+                  Name="dataGrid"
+                  IsReadOnly="True"
+                  RowStyleSelector="{StaticResource ResourceKey=PrintGridRowStyleSelector}"
+                  HeadersVisibility="Column"
+                  BorderBrush="White"
+                  Background="White"
+                  >
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Text" 
+                                    Width="300"
+                                    Binding="{Binding Text}"
+                                    />
+
+            <DataGridTextColumn Header="Kód" 
+                                    Width="100"
+                                    Binding="{Binding Code}"
+                                    />
+
+            <DataGridTextColumn Header="Počet kusů"
+                                    Width="70"
+                                    Binding="{Binding Count}"
+                                    />
+
+            <DataGridTextColumn Header="Končený počet"
+                                    Width="90"
+                                    Binding="{Binding FinalCount}"
+                                    />
+
+            <DataGridTextColumn Header="Datum vytvoření" 
+                                    Width="100"
+                                    Binding="{Binding ReadonlyReceiveDate}"
+                                    />
+
+            <DataGridTextColumn Header="Předpokládané ukončení" 
+                                    Width="142"
+                                    CanUserSort="True"
+                                    Binding="{Binding ReadonlyEstimatedDate}"
+                                    />
+
+            <DataGridTextColumn Header="Datum ukončení" 
+                                    Width="100"
+                                    CanUserSort="True"
+                                    Binding="{Binding ReadonlyTerminationDate}"
+                                    />
+        </DataGrid.Columns>
+    </DataGrid>
+
+    <ImageSource x:Key="MainIcon">Resources/icon.png</ImageSource>
+    <ImageSource x:Key="OkIcon">Resources/ok.png</ImageSource>
+</ResourceDictionary>

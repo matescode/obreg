@@ -1,0 +1,43 @@
+Historie - samostatne okno s navigatorem
+
+Tisk
+- dole vedle hledani - bude uplne vsude
+
+Okno
+- zablokovat minimalizaci, maximalizaci, zavreni
+- zavreni => tlacitko dole
+- zkusit zajistit aby zustalo porad nahore
+
+Datum - zobrazit aktualni
+
+Pridat pocet
+
+Vyhledavani 
+- zobrazi se okno s vysledkem
+- ve vsech oknech bude vyhledavani
+
+
+--------------------------------------------------------
+
+tak k tomu prográmku:
+- základní šíøka text. pole ve všech oknech 400px s tím, že se bude dát roztahovat (rozlišení monitoru je 1280x960)
+- pøibude 1 pole s kalendáøem (celkovì 3) ; poøadí a pojmenování bude : Datum vytvoøení, Pøedpokládané ukonèení , Datum ukonèení
+- ještì bych chtìl pøidat pole s množstvím kusù; poøadí a názvy: Poèet kusù, Koneèný poèet
+ 
+Abych to shrnul, tak poøadí bude: Text, Kód, Poèet kusù, Koneèný poèet, Datum vytvoøení, Pøedpokládané ukonèení, Datum ukonèení
+ 
+Aby sis nemusel hrát s tím tiskem, napadlo mì, že když klikneš na tisk, vytvoøí se soubor XPS, ale o tevøel by se automaticky v zápìtí v Internetexploreru - z toho by se to vytisklo, po zavøení by se smazal, pokud to nepùjde, tak se mùže jen vytvoøit do nìjaké podsložky, která se èasem mázne fyzicky.
+Pøi tom tisku by text mìl obsahovat 60% celkové šíøky tabulky.
+
+--------------------------------------------------------
+
+- text nakonec 300px
+- Vyhledávání, historie - široké tak, aby se to nemuselo roztahovat (na velikost programu)
+- Pøi zadávání aby byl koneèný poèet a poèet kusù na 0 (naskakují tam 1)
+- poèet kusù je useknutý, trochu rozšíøit
+- Pokud to pùjde tak aby v základu u datumù bylo "vybrat datum" a ne aktuální, nebo aktuální jen pro sloupec vytvoøení
+- Pokud omylem vytvoøím kolonku navíc v Hlavní záložce, tak aby šla vymazat (tøeba pravým tlaèítkem -> odstranit)
+- Tisk je OK pøes tiskárnu i pøes XPS
+- Dodìlat "èíselník" (seznam položek) - Kód + náhodný text (náhodný text proto, že kód mùže být stejný, ale text se mùže lišit, tak aby se tam zobrazil náhodnì tøeba z prvního zadání kódu)
+- pokud to nebude problém, tak aby se kód mohl zadávat ruènì, a nebo z "èíselníku", nìco jako datum, ale byl by tam seznam kódù (jde o to abych si tøeba duplùicitnì nevytvoøil stejné kódy, ale lišily by se tøeba v mezeøe)
+- Tisk by mìl být podle aktuálního okna - když si dám seøadit podle kódu, nebo data, tak aby se to tak i vytisklo. Teï se to tiskne asi podle zadávání

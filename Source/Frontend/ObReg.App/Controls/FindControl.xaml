@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ObReg.App.Controls.FindControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <Grid>
+        <StackPanel Orientation="Horizontal" 
+                    Height="30"
+                    Background="LightGray"
+                    >
+            <TextBlock VerticalAlignment="Center" 
+                       Text="Kód:" 
+                       Margin="2"
+                       />
+
+            <TextBox Name="codeTextBox" 
+                     Width="200" 
+                     BorderBrush="Black" 
+                     Height="23" 
+                     Margin="2"
+                     >
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding FindItemsCommand}"
+                                CommandParameter="{Binding ElementName=codeTextBox, Path=Text}"
+                                Key="Enter"
+                                />
+                </TextBox.InputBindings>
+            </TextBox>
+
+            <Button Content="Hledej" 
+                    Height="25" 
+                    Command="{Binding FindItemsCommand}"
+                    CommandParameter="{Binding ElementName=codeTextBox, Path=Text}"
+                    />
+        </StackPanel>
+    </Grid>
+</UserControl>

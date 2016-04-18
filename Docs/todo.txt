@@ -1,0 +1,8 @@
+TODO:
+
+Doladit detaily:
+- pocet - zobrazit jako up-down
+- instalator
+
+Okno:
+- zkusit zajistit aby zustalo porad nahore

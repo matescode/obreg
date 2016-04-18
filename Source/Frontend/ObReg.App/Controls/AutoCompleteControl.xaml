@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ObReg.App.Controls.AutoCompleteControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <StackPanel Width="140">
+        <StackPanel Orientation="Horizontal" Name="mainStack">
+            <TextBox Name="editBox" Width="100" Height="22" TextChanged="editBox_TextChanged" />
+            <Button Content=">>"
+                    Name="okButton"
+                    Margin="5, 1"
+                    Width="30"
+                    Click="okButton_Click"
+                    />
+        </StackPanel>
+        <Popup Name="popup" Placement="Bottom" PlacementTarget="{Binding ElementName=mainStack}" Width="140" Closed="popup_Closed" StaysOpen="False" IsOpen="False">
+            <ListBox Name="possibleValuesListBox" MaxHeight="150"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                 >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Text}" ToolTip="{Binding ToolTip}" Width="115" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
+                            <TextBlock.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <Trigger Property="TextBlock.IsMouseOver" Value="True">
+                                    <Setter Property="TextBlock.Background" Value="SkyBlue" />
+                                </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Popup>
+    </StackPanel>
+</UserControl>

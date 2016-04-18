@@ -1,0 +1,16 @@
+﻿<Window x:Class="ObReg.App.Windows.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ObReg - OBjednávkový REGistr" 
+        Height="116"
+        Width="469"
+        Topmost="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Closing="LoadingWindow_OnClosing"
+        >
+    <Grid>
+        <Label Content="Načítám data ..." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ProgressBar HorizontalAlignment="Left" Height="25" Margin="10,41,0,0" VerticalAlignment="Top" Width="428" IsIndeterminate="True" />
+    </Grid>
+</Window>
